@@ -1,16 +1,12 @@
 words = input("Write a sentence containing 10 words (be creative): ")
 length = 10
-newwords = words.split(" ")
-while True:
-    if length == len(newwords):
-        print(words[::-1])
+new_words = words.split(" ")
 
-        print ("\n AND\n")
+if length == len(new_words):
+    print(words[::-1])
 
-        # newwords = words.split(" ")
-        sentence = [word[::-1] for word in newwords]
-        newSentence = " ".join(sentence)
-        print(newSentence)
-        break
-    else:
-        break
+    print ("\n AND\n")
+
+    sentence = [word[::-1] for word in new_words]
+    new_Sentence = " ".join(sentence)
+    print(new_Sentence)
