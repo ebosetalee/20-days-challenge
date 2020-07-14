@@ -8,5 +8,5 @@ if length == len(new_words):
     print ("\n AND\n")
 
     sentence = [word[::-1] for word in new_words]
-    new_Sentence = " ".join(sentence)
-    print(new_Sentence)
+    new_sentence = " ".join(sentence)
+    print(new_sentence)
