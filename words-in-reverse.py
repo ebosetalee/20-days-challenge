@@ -1,14 +1,10 @@
-words = ["When", "life", "is",\
-    "easy,", "do", "hard", "things",
-    "and", "be", "you"]
+words = "When life is easy, do hard things and be you"
 
-wordString = ""
-wordString = " ".join(words)
-print(wordString+ "!\n") 
-
-print(wordString[::-1])
+print(words[::-1])
 
 print ("\n AND\n")
 
-for word in words:
-    print(word[::-1], end = ' ')
+newwords = words.split(" ")
+sentence = [word[::-1] for word in newwords]
+newSentence = " ".join(sentence)
+print(newSentence)
