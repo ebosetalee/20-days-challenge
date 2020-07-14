@@ -1,4 +1,4 @@
-words = "When life is easy, do hard things and be you"
+words = input("Write a sentence containing 10 words (be creative): ")
 
 print(words[::-1])
 
