@@ -17,7 +17,7 @@ def calclulate_base_16():
     print("{0} to base 16 is {0:>06x}".format(number))
 
 def base_11_to_15():
-    base_value = "0123456789abcde"
+    base_value = "0123456789ABCDEF"
     res=""
     a = number
     while (a > 0):
