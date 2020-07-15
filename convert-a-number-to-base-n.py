@@ -2,7 +2,6 @@ import random
 number = int(random.random()*1000000000)
 my_list = [2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13, 14, 15, 16]
 base_number = int(random.choice(my_list)) 
-print(base_number)
 
 def calculate_base():
     res=""
