@@ -14,7 +14,7 @@ def calculate_base():
     print("{0} to base {1:2} is {2}".format(number,base_number,res[::-1]))
 
 def calclulate_base_16():
-    print("{0} to base 16 is {0:>04x}".format(number))
+    print("{0} to base 16 is {0:>06x}".format(number))
 
 def base_11_to_15():
     base_value = "0123456789abcde"
