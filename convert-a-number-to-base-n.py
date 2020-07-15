@@ -13,10 +13,7 @@ def calculate_base():
       a = d
     print("{0} to base {1:2} is {2}".format(number,base_number,res[::-1]))
 
-def calclulate_base_16():
-    print("{0} to base 16 is {0:>06x}".format(number))
-
-def base_11_to_15():
+def base_11_to_16():
     base_value = "0123456789ABCDEF"
     res=""
     a = number
@@ -29,7 +26,5 @@ def base_11_to_15():
 
 if base_number < 10:
     calculate_base()
-elif (base_number == 16):
-    calclulate_base_16()
 else:
-    base_11_to_15()
+    base_11_to_16()
