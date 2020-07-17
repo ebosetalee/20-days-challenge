@@ -10,5 +10,5 @@ for i in random_word:
     if word == i:
         print("YES in {}".format(index))
     index += 1
-if word not in random_word:
+if word != random_word:
     print("NO")
