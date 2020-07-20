@@ -13,12 +13,12 @@ count = 0
 while word != dic_list and word != "!":
     word = input("Kindly type one letter only: ").upper()
     index = 0
+    count += 1
     for i in dic_list:
         if word == i:
             dic_list[word] = True
             print("YES in {0} and it only took you {1} tries".format(index, count))
-        index += 1
-    count += 1
+        index += 1 
     if word == "!":
         for val in dic_list:
             print(val + ": {} ".format(dic_list[val]))
