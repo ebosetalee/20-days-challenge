@@ -12,7 +12,7 @@ while word != random_word and word != "!":
             print("YES in {}".format(index))
         index += 1
     random_word == i
-    print(random_word)
+    # print(random_word)
     if word == "!":
         break
     elif word not in random_word:
