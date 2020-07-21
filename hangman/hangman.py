@@ -14,8 +14,7 @@ def convert_to_dictionary():
     return dic_list    
 dic_list = convert_to_dictionary()
 
-def hangman_function():
-    word = ""
+def hangman(word=""):
     count = 0
     while True:
         word = input("Kindly type one letter only: ").upper()
@@ -32,4 +31,4 @@ def hangman_function():
             break
         elif word not in dic_list:
             print("NO! try again. Type ! to quit")
-hangman_function()
+hangman()
