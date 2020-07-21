@@ -1,5 +1,6 @@
 import random
 def get_target_word():
+    """ This function picks a random string from a list"""
     my_list = ["I", "eat", "chicken", "and", "turkey"]
     random_word = str(random.choice(my_list).upper())
     print(random_word)
@@ -7,6 +8,7 @@ def get_target_word():
 random_word = get_target_word()
 
 def convert_to_dictionary():
+    """ converts the string to dictionary with values as False"""
     dic_list = {}
     for letters in random_word:
         dic_list[letters] = False
@@ -14,7 +16,12 @@ def convert_to_dictionary():
     return dic_list    
 dic_list = convert_to_dictionary()
 
-def hangman(word=""):
+def hangman():
+    """ 
+    Processes the user input, with the target word
+    to determine which letter is guessed correctly.
+    """
+    word=""
     count = 0
     while True:
         word = input("Kindly type one letter only: ").upper()
