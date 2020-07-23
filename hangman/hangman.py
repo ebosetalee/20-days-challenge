@@ -21,7 +21,7 @@ def hangman():
     Processes the user input, with the target word
     to determine which letter is guessed correctly.
     """
-    attempt = 5
+    attempt = 10
     word=""
     count = 0
     while True:
