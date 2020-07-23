@@ -25,7 +25,7 @@ def hangman():
     word=""
     count = 0
     while True:
-        print(count)
+        print("You have {} attempts".format(times-count))
         word = input("Kindly type one letter only: ").upper()
         index = 0 
         count += 1 
@@ -39,7 +39,7 @@ def hangman():
                 print(val + ": {} ".format(dic_list[val]))
             break
         elif count == times:
-            print("The END")
+            print("The END! You've used up your attempts. Try again!")
             for val in dic_list:
                 print(val + ": {} ".format(dic_list[val]))
             break
