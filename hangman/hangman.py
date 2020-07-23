@@ -21,12 +21,11 @@ def hangman():
     Processes the user input, with the target word
     to determine which letter is guessed correctly.
     """
-    attempt = 10
+    attempt = 5
     word=""
     count = 0
     while True:
-        print("You have {} attempts".format(attempt-count))
-        word = input("Kindly type one letter only: ").upper()
+        word = input("\nKindly type one letter or ! to quit: ").upper()
         index = 0 
         count += 1 
         for i in random_word:
@@ -38,11 +37,12 @@ def hangman():
             for val in dic_list:
                 print(val + ": {} ".format(dic_list[val]))
             break
-        elif count == attempt:
-            print("The END! You've used up your attempts. Try again!")
-            for val in dic_list:
-                print(val + ": {} ".format(dic_list[val]))
-            break
         elif word not in dic_list:
-            print("NO! try again. Type ! to quit")
+            attempt -= 1
+            print("NO! you have {} trial(s).".format(attempt))
+            if attempt == 0:
+                print("The END! You've used up your trials. Try again!")
+                for val in dic_list:
+                    print(val + ": {} ".format(dic_list[val]))
+                break
 hangman()   
