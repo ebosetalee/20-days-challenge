@@ -1,7 +1,7 @@
 import random
 def get_target_word():
     """ This function picks a random string from a list"""
-    my_list = ["I", "eat", "chicken", "and", "turkey"]
+    my_list = ["We", "eat", "chicken", "and", "turkey"]
     random_word = str(random.choice(my_list).upper())
     print(random_word)
     return random_word
@@ -20,24 +20,25 @@ def hangman():
     """ 
     Processes the user input, with the target word
     to determine which letter is guessed correctly.
-    """
+    """ 
     attempt = 10
-    word=""
+    guessed_letter=""
     count = 0
-    while True:
-        word = input("\nKindly type one letter or ! to quit: ").upper()
+    loop = True
+    while loop:
+        guessed_letter = input("\nKindly type one letter or ! to quit: ").upper()
         index = 0 
-        count += 1 
+        count += 1      
         for i in random_word:
-            if word == i:
-                dic_list[word] = True
-                print("YES in {0} after {1} tries".format(index, count))
+            if guessed_letter == i:
+                dic_list[guessed_letter] = True
+                print("YES in {0} after {1} tries".format(index, count))            
             index += 1 
-        if word == "!":
+        if guessed_letter == "!":
             for val in dic_list:
                 print(val + ": {} ".format(dic_list[val]))
             break
-        elif word not in dic_list:
+        elif guessed_letter not in dic_list:
             attempt -= 1
             print("NO! you have {} trial(s).".format(attempt))
             if attempt == 0:
@@ -45,4 +46,21 @@ def hangman():
                 for val in dic_list:
                     print(val + ": {} ".format(dic_list[val]))
                 break
+        display_current_guess(dic_list, random_word) 
+        dic_values = dic_list.values()
+        new_loop = all(dic_values)
+        if new_loop == True:
+            print("Yayyy!!!! Congratulations!!!!!")
+            loop = False
+        
+def display_current_guess(correct_guess, target_word):
+    """ Prints out the correctly guessed target word"""
+    outputs = ""
+    for letters in target_word:
+        if correct_guess[letters] == True:
+            outputs += letters
+        else:
+            outputs += "_"    
+    print(outputs)
+
 hangman()   
