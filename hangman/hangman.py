@@ -24,8 +24,7 @@ def hangman():
     attempt = 10
     guessed_letter=""
     count = 0
-    loop = True
-    while loop:
+    while True:
         guessed_letter = input("\nKindly type one letter or ! to quit: ").upper()
         index = 0 
         count += 1      
@@ -48,10 +47,9 @@ def hangman():
                 break
         display_current_guess(dic_list, random_word) 
         dic_values = dic_list.values()
-        new_loop = all(dic_values)
-        if new_loop == True:
+        if all(dic_values):
             print("Yayyy!!!! Congratulations!!!!!")
-            loop = False
+            break
         
 def display_current_guess(correct_guess, target_word):
     """ Prints out the correctly guessed target word"""
