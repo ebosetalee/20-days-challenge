@@ -2,7 +2,7 @@ import random
 def get_target_word():
     """Selects a random string from a file"""
     my_list = []
-    with open("data/words.txt", "r") as words:
+    with open("hangman/data/words.txt", "r") as words:
         for paragraphs in words:
             my_list.append(paragraphs.strip("\n"))
     random_word = str(random.choice(my_list).upper())
