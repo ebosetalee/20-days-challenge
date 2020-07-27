@@ -1,7 +1,11 @@
 import random
 def get_target_word():
-    """ This function picks a random string from a list"""
-    my_list = ["We", "eat", "chicken", "and", "turkey"]
+    """Selects a random string from a file"""
+    my_list = []
+    with open("/Users/ella/20-days-challenge/hangman/data/words.txt", "r") as words:
+        for paragraphs in words:
+            my_list.append(paragraphs.strip("\n"))   
+    print(my_list)
     random_word = str(random.choice(my_list).upper())
     print(random_word)
     return random_word
