@@ -656,7 +656,6 @@ simple
 sister
 size
 skin
-
 skirt
 sky
 sleep
@@ -679,7 +678,6 @@ sock
 soft
 solid
 some
-
 son
 song
 sort
