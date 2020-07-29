@@ -1,4 +1,8 @@
 import random
+import re
+import math
+
+
 def get_target_word():
     """Selects a random string(target word) from a file"""
     my_list = []
@@ -6,8 +10,9 @@ def get_target_word():
         for paragraphs in words:
             my_list.append(paragraphs.strip("\n"))
     random_word = str(random.choice(my_list).upper())
-    print(random_word)
+    # print(random_word)
     return random_word
+
 
 class Hangman():
 
@@ -23,7 +28,7 @@ class Hangman():
         for letters in self.target_word:
             dict_list[letters] = False
         return dict_list
-    
+
     def display_current_guess(self):
         """ Prints out the correctly guessed target word"""
         outputs = ""
@@ -31,24 +36,36 @@ class Hangman():
             if self.dict_list[letters] == True:
                 outputs += letters
             else:
-                outputs += "_"    
+                outputs += "_"
         print(outputs)
+
+    def input_validation(self, guessed_letter):
+        """ Uses regular expression to check
+        1. Not an alphabet (lower or uppercase)
+        2. Not a single character
+        3. Not the quit character (!)
+        """
+        validation = re.search("^([a-zA-Z]|!)$", guessed_letter)
+        return validation
 
     def run(self):
         """This runs through all the Hangman methods while asking 
         the user for a guessed letter. """
-        attempt = 12
-        guessed_letter=""
+        attempt = math.ceil(len(self.target_word) * 1.5)
         count = 0
         while True:
-            guessed_letter = input("\nKindly type one letter or ! to quit: ").upper()
-            index = 0 
-            count += 1      
+            guessed_letter = input("\nKindly type one letter or ! to quit: ")
+            if not self.input_validation(guessed_letter):
+                print("Please type a single character alphabet or '!' to quit")
+                continue
+            guessed_letter = guessed_letter.upper()
+            index = 0
+            count += 1
             for i in self.target_word:
                 if guessed_letter == i:
                     self.dict_list[guessed_letter] = True
-                    print("YES in {0} after {1} tries".format(index, count))            
-                index += 1 
+                    print("YES in {0} after {1} tries".format(index, count))
+                index += 1
             if guessed_letter == "!":
                 print("The correct word is {}. Bye.....".format(self.target_word))
                 break
@@ -57,13 +74,15 @@ class Hangman():
                 print("NO! you have {} trial(s).".format(attempt))
                 if attempt == 0:
                     print("The END! You've used up your trials. Try again!")
-                    print("The correct word is {}. Bye.....".format(self.target_word))
+                    print("The correct word is {}. Bye.....".format(
+                        self.target_word))
                     break
-            self.display_current_guess() 
+            self.display_current_guess()
             dic_values = self.dict_list.values()
             if all(dic_values):
                 print("Yayyy!!!! Congratulations!!!!!")
                 break
+
 
 target_word = get_target_word()
 hangman = Hangman(target_word)
