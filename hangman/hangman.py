@@ -10,7 +10,7 @@ def get_target_word():
         for paragraphs in words:
             my_list.append(paragraphs.strip("\n"))
     random_word = str(random.choice(my_list).upper())
-    # print(random_word)
+    print(random_word)
     return random_word
 
 
