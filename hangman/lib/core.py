@@ -1,17 +1,5 @@
-import random
 import re
 import math
-
-
-def get_target_word():
-    """Selects a random string(target word) from a file"""
-    my_list = []
-    with open("hangman/data/words.txt", "r") as words:
-        for paragraphs in words:
-            my_list.append(paragraphs.strip("\n"))
-    random_word = str(random.choice(my_list).upper())
-    print(random_word)
-    return random_word
 
 
 class Hangman():
@@ -82,9 +70,3 @@ class Hangman():
             if all(dic_values):
                 print("Yayyy!!!! Congratulations!!!!!")
                 break
-
-
-target_word = get_target_word()
-hangman = Hangman(target_word)
-
-hangman.run()
