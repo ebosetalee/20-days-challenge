@@ -42,7 +42,12 @@ class Hangman():
         attempt = math.ceil(len(self.target_word) * 1.5)
         count = 0
         while True:
-            guessed_letter = input("\nKindly type one letter or ! to quit: ")
+            try:
+                guessed_letter = input(
+                    "\nKindly type one letter or ! to quit: ")
+            except KeyboardInterrupt:
+                print("\nThe correct word is {}. Bye.....".format(self.target_word))
+                break
             if not self.input_validation(guessed_letter):
                 print("Please type a single character alphabet or '!' to quit")
                 continue
