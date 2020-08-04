@@ -1,8 +1,10 @@
 import sqlite3
 
+
 db = sqlite3.connect("hangman/data/store_guesses.sqlite")
-def create_table():
-    
+
+def create_table(): 
+    """sqlite table created to store guesses"""
     db.execute("CREATE TABLE IF NOT EXISTS guesses(letter CHAR)")
 
 def guesses_table(stored_guessed_letter):
