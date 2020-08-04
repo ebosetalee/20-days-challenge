@@ -1,19 +1,20 @@
 import sqlite3
 
 
-contents = sqlite3.connect("hangman/data/store_guesses.sqlite")
-contents.execute("CREATE TABLE IF NOT EXISTS guesses(letter CHAR)")
+def create_table():
+    db = sqlite3.connect("hangman/data/store_guesses.sqlite")
+    db.execute("CREATE TABLE IF NOT EXISTS guesses(letter CHAR)")
 
 def guesses_table(guess):
     """ adds the guesses into the table created"""
-    contents.execute("INSERT INTO guesses VALUES('{}')".format(guess))
-    cursor = contents.cursor()
+    db.execute("INSERT INTO guesses VALUES('{}')".format(guess))
+    cursor = db.cursor()
     cursor.execute("SELECT * FROM guesses")
     print(cursor.fetchall())
-    contents.commit()
+    db.commit()
 
 def drop_table():
-    """ deletes the table and its contents """
-    drops = "DROP TABLE guesses"
-    contents.execute(drops)
-    contents.close()
+    """ deletes the table and its db """
+    drop_table_query = "DROP TABLE guesses"
+    db.execute(drop_table_query)
+    db.close()
