@@ -1,4 +1,4 @@
-from lib.database import guesses_table, drop_table
+from lib.database import guesses_table
 import re
 import math
 
