@@ -8,9 +8,6 @@ def create_table():
 def guesses_table(stored_guessed_letter):
     """ adds the guesses into the table created"""
     db.execute("INSERT INTO guesses VALUES('{}')".format(stored_guessed_letter))
-    cursor = db.cursor()
-    cursor.execute("SELECT * FROM guesses")
-    print(cursor.fetchall())
     db.commit()
 
 def drop_table():
