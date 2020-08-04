@@ -1,3 +1,4 @@
+from lib.database import guesses_table, drop_table
 import re
 import math
 
@@ -52,6 +53,7 @@ class Hangman():
                 print("Please type a single character alphabet or '!' to quit")
                 continue
             guessed_letter = guessed_letter.upper()
+            guesses_table(guessed_letter)
             index = 0
             count += 1
             for i in self.target_word:
@@ -61,6 +63,7 @@ class Hangman():
                 index += 1
             if guessed_letter == "!":
                 print("The correct word is {}. Bye.....".format(self.target_word))
+                drop_table()
                 break
             elif guessed_letter not in self.dict_list:
                 attempt -= 1
@@ -69,9 +72,11 @@ class Hangman():
                     print("The END! You've used up your trials. Try again!")
                     print("The correct word is {}. Bye.....".format(
                         self.target_word))
+                    drop_table()
                     break
             self.display_current_guess()
             dic_values = self.dict_list.values()
             if all(dic_values):
                 print("Yayyy!!!! Congratulations!!!!!")
+                drop_table()
                 break
