@@ -5,9 +5,9 @@ def create_table():
     
     db.execute("CREATE TABLE IF NOT EXISTS guesses(letter CHAR)")
 
-def guesses_table(guessed_letter):
+def guesses_table(stored_guessed_letter):
     """ adds the guesses into the table created"""
-    db.execute("INSERT INTO guesses VALUES('{}')".format(guessed_letter))
+    db.execute("INSERT INTO guesses VALUES('{}')".format(stored_guessed_letter))
     cursor = db.cursor()
     cursor.execute("SELECT * FROM guesses")
     print(cursor.fetchall())
