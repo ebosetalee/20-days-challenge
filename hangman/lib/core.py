@@ -53,6 +53,11 @@ class Hangman():
                 print("Please type a single character alphabet or '!' to quit")
                 continue
             guessed_letter = guessed_letter.upper()
+            try:
+                store_guessed_letter(guessed_letter)
+            except:
+                print("You've made this guess. Guess again.")
+                continue
             store_guessed_letter(guessed_letter)
             index = 0
             count += 1
