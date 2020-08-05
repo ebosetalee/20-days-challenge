@@ -58,6 +58,7 @@ class Hangman():
             except:
                 print("You've made this guess. Guess again.")
                 continue
+            store_guessed_letter(guessed_letter)
             index = 0
             count += 1
             for i in self.target_word:
