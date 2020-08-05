@@ -1,4 +1,4 @@
-from lib.database import guesses_table
+from lib.database import store_guessed_letter
 import re
 import math
 
@@ -53,7 +53,7 @@ class Hangman():
                 print("Please type a single character alphabet or '!' to quit")
                 continue
             guessed_letter = guessed_letter.upper()
-            guesses_table(guessed_letter)
+            store_guessed_letter(guessed_letter)
             index = 0
             count += 1
             for i in self.target_word:
