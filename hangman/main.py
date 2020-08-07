@@ -10,8 +10,10 @@ welcome = """WELCOME! to [i #424CDF ]@ebosetalee's[/i #424CDF]
 [b #BFBF1B]Hangman Game[/b #BFBF1B]!!!"""
 
 game_info = """ [frame]
-    Hangman game just like others, there's a random guess word chosen by the computer.
-    Each player gets a different word and given a limited number of guesses.\n
+    Hangman game just like others, there's a 
+    random guess word chosen by the computer.
+    Each player gets a different word 
+    and given a limited number of guesses.\n
     In that time, the player must guess the word correctly
     Each player can quit the game, OR 
     Keep guessing till all guesses are used.\n [/frame]
@@ -30,12 +32,12 @@ console.print(
     "\n:smiley:", "WELCOME!!!!", ":smiley:\n\n", ":Man_dancing: :Woman_dancing: " * 10,
      "\n", style="#386691 on #808080", justify="center")
 #6F767E
+
 print()
 console.rule(welcome)
-console.print(game_info, overflow="fold, rule", justify="left")
+console.print(game_info, justify="left")
 
-console.print(game_rules, overflow="fold",
-              justify="center", style="black on #A07E2B")
+console.print(game_rules, justify="center", style="black on #A07E2B")
 
 print()
 hangman = Hangman(target_word())
