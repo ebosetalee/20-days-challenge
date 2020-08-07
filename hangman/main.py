@@ -17,8 +17,8 @@ game_info = """ [frame]
     In that time, the player must guess the word correctly
     Each player can quit the game, OR 
     Keep guessing till all guesses are used.\n [/frame]
-    :Sparkles:!!!NOW!!!:Sparkles: \n
-    :Sparkles:How do you play the game?:Sparkles:\n  """
+    :Sparkles: !!!NOW!!!:Sparkles: \n
+    :Sparkles: How do you play the game?:Sparkles:\n  """
 
 game_rules = """ 
 [uu red]These are the rules of the game!!!![/uu red]\n [i]
