@@ -1,6 +1,10 @@
 from lib.database import store_guessed_letter
+from rich.console import *
 import re
 import math
+
+
+console = Console(width=120, color_system="truecolor", emoji=True,)
 
 
 class Hangman():
@@ -44,34 +48,37 @@ class Hangman():
         count = 0
         while True:
             try:
-                guessed_letter = input(
-                    "\nKindly type one letter or ! to quit: ")
+                guessed_letter = console.input(
+                    "\n[blue]Kindly type one letter or ! to quit: [/blue]")
             except KeyboardInterrupt:
                 print("\nThe correct word is {}. Bye.....".format(self.target_word))
                 break
             if not self.input_validation(guessed_letter):
-                print("Please type a single character alphabet or '!' to quit")
+                console.rule(
+                    "Please type a single character alphabet or '!' to quit")
                 continue
             guessed_letter = guessed_letter.upper()
             try:
                 store_guessed_letter(guessed_letter)
             except:
-                print("You've made this guess. Guess again.")
+                console.print(
+                    "You've made this guess. Guess again.", style="#F39C12")
                 continue
-            store_guessed_letter(guessed_letter)
             index = 0
             count += 1
             for i in self.target_word:
                 if guessed_letter == i:
                     self.dict_list[guessed_letter] = True
-                    print("YES in {0} after {1} tries".format(index, count))
+                    console.print("YES in {0} after {1} tries".format(
+                        index, count), style="Green")
                 index += 1
             if guessed_letter == "!":
                 print("The correct word is {}. Bye.....".format(self.target_word))
                 break
             elif guessed_letter not in self.dict_list:
                 attempt -= 1
-                print("NO! you have {} trial(s).".format(attempt))
+                console.print("NO! you have {} trial(s).".format(
+                    attempt), style="red")
                 if attempt == 0:
                     print("The END! You've used up your trials. Try again!")
                     print("The correct word is {}. Bye.....".format(
