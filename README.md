@@ -65,6 +65,4 @@ If the player doesn't follow the instruction, the following output prints depend
 Whereas, if a letter is guessed correctly, the game prints the following:
 ![Hangman](pictures/pic7.png)
 
-See [hangman](https://repl.it/@EmmanuellaEsezo/18-Hangman-18-20) to play or clone the repository.
-
-See [20-days-challenge](https://repl.it/repls/folder/20-days-challenge) for more information. 
+See [hangman](https://repl.it/@EmmanuellaEsezo/hangman) to play or clone the repository.
