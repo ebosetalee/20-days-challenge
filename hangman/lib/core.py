@@ -55,7 +55,7 @@ class Hangman():
                 break
             if not self.input_validation(guessed_letter):
                 console.rule(
-                    "Please type a single character alphabet or '!' to quit")
+                    "Please type a single character alphabet or '!' to quit", style="red")
                 continue
             guessed_letter = guessed_letter.upper()
             try:
