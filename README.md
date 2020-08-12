@@ -1,4 +1,4 @@
-# 20-days-challenge.
+# 20 Days Python Coding Challenge.
 
 This challenge shows my progress in Python over 20days.
 ![info](pictures/pic8.png)
