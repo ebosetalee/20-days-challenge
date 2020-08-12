@@ -1,1 +1,1 @@
-run = "python hangman/main.py"
+run = "pip install rich && python hangman/main.py"
