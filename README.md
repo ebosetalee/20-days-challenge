@@ -3,7 +3,7 @@
 This challenge shows my progress in Python over 20days.
 ![info](pictures/pic8.png)
 
-The 20 days challenge is engineered by @jirevwe and @yudori (my tutors) with a purpose to help me grow in my understanding and solving of pythons like questions and problems. 
+The 20 days challenge is engineered by [@jirevwe](https://github.com/jirevwe) and [@yudori](https://github.com/yudori) (my tutors) with a purpose to help me grow in my understanding and solving of pythons like questions and problems. 
 
 Over the 20 days, I learnt: 
 - how to _install pip and check pip version_
