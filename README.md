@@ -21,7 +21,7 @@ Over the 20 days, I learnt:
 - _class and class attributes_ - this took a while but looking back, it seems easy.
 - _Importing_ packages and code - I had no idea i could import a file written in python to another file. This brought my understanding of `__init__` and `__pycache__`.
 - a new language - I regard this as a major plus, learning sql commands and using them(__SQLite3__) in python.
-- more on creating and using a _virtual environment_ - Luckily a week before the challenge I was learning Json and Venv on youtube.
+- more on creating and using a _Virtual Environment_ - Luckily a week before the challenge I was learning __Json__ and __Venv__ on youtube.
 - installing a pyton library
 - Majorly, how to use the __Rich API__ - a Python library for rich text and beautiful formatting in the terminal.
 - Lastly but not the least __editing Readme__ to have images and different text formats.
@@ -53,7 +53,7 @@ This is a game that the computer chooses a random word from a text file containi
 ![Hangman Game](pictures/pic4.png) 
 
 The game uses the rich library to show color and style to the introduction as well as what the game prints out. It runs with the rich console width of 120.
-`console = Console(width=120)`
+```console = Console(width=120)```
 
 At the start the player gets an introduction and the rules of the game to ensure the player is familiar with the output.
 ![Hangman Design](pictures/pic5.png)
