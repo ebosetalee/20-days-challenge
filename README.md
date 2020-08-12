@@ -1,7 +1,7 @@
 # 20-days-challenge.
 
 This challenge shows my progress in Python over 20days.
-![info](pic8.png)
+![info](pictures/pic8.png)
 
 The 20 days challenge is engineered by @jirevwe and @yudori (my tutors) with a purpose to help me grow in my understanding and solving of pythons like questions and problems. 
 
@@ -35,36 +35,36 @@ The contents of this challenge include:
 
 ## WECLOME.py
 This requests for firstname, lastname and age and prints them out telling you the year you were born.
-![welcome](pic1.png)
+![welcome](pictures/pic1.png)
 
 ## WORDS IN REVERSE.py
 This requests a sentence from the user and prints it in two different reverse forms.
-![words in reverse](pic2.png)
+![words in reverse](pictures/pic2.png)
 
 ## CONVERT A NUMBER TO BASE N.py
 A number between 0 and 1000000000 is randomly selected by the computer and converted to a random base between 2 and 16 except 10.
-![convert a number to base n](pic3.png)
+![convert a number to base n](pictures/pic3.png)
 
 ## COMBINE TWO FILES.py
 This collects the contents of two files, combines them and writes the comibined data into another file.
 
 ## HANGMAN.py
 This is a game that the computer chooses a random word from a text file containing 852 words. The player tries to guess the exact word, following the game's introduction.
-![Hangman Game](pic4.png) 
+![Hangman Game](pictures/pic4.png) 
 
 The game uses the rich library to show color and style to the introduction as well as what the game prints out. It runs with the rich console width of 120.
 `console = Console(width=120)`
 
 At the start the player gets an introduction and the rules of the game to ensure the player is familiar with the output.
-![Hangman Design](pic5.png)
+![Hangman Design](pictures/pic5.png)
 
 Then the game tells the player to guess a letter.
 If the player doesn't follow the instruction, the following output prints depending on which rule was ignored.
-![Hangman Validation](pic6.png)
+![Hangman Validation](pictures/pic6.png)
 
 Whereas, if a letter is guessed correctly, the game prints the following:
-![Hangman](pic7.png)
+![Hangman](pictures/pic7.png)
 
-See ![hangman](https://repl.it/@EmmanuellaEsezo/18-Hangman-18-20) to play or clone the repository.
+See [hangman](https://repl.it/@EmmanuellaEsezo/18-Hangman-18-20) to play or clone the repository.
 
-See ![20-days-challenge](https://repl.it/repls/folder/20-days-challenge) for more information. 
+See [20-days-challenge](https://repl.it/repls/folder/20-days-challenge) for more information. 
